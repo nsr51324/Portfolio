@@ -1111,6 +1111,110 @@
       text-align: center;
     }
 
+    /* CERTIFICATES */
+    .cert-slider-wrap {
+      position: relative;
+      overflow: hidden;
+    }
+    .cert-track {
+      display: flex;
+      transition: transform .45s cubic-bezier(.4,0,.2,1);
+      gap: 0;
+    }
+    .cert-slide {
+      min-width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 4px;
+    }
+    .cert-img {
+      max-width: 100%;
+      max-height: 420px;
+      width: auto;
+      border-radius: 12px;
+      border: 1px solid var(--bor);
+      box-shadow: 0 16px 50px rgba(0,0,0,.5);
+      object-fit: contain;
+    }
+    .cert-nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1.4rem;
+    }
+    .cert-btn {
+      background: rgba(124,108,255,.1);
+      border: 1px solid rgba(124,108,255,.25);
+      color: var(--ac);
+      border-radius: 8px;
+      width: 38px;
+      height: 38px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: all .2s;
+      font-family: monospace;
+    }
+    .cert-btn:hover {
+      background: rgba(124,108,255,.22);
+      border-color: var(--ac);
+    }
+    .cert-dots {
+      display: flex;
+      gap: 5px;
+    }
+    .cert-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--mut);
+      cursor: pointer;
+      transition: all .2s;
+    }
+    .cert-dot.active {
+      background: var(--ac);
+      transform: scale(1.3);
+    }
+    .cert-counter {
+      font-size: 11px;
+      color: var(--mut);
+      min-width: 40px;
+      text-align: center;
+    }
+    .cert-label {
+      font-size: 12px;
+      color: rgba(238,238,255,.5);
+      text-align: center;
+      margin-top: .7rem;
+      min-height: 36px;
+      line-height: 1.7;
+    }
+    .cert-label b {
+      display: block;
+      font-size: 13px;
+      color: var(--txt);
+      font-family: 'Syne', sans-serif;
+      font-weight: 600;
+      letter-spacing: -.2px;
+    }
+    .cert-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 2px 9px;
+      border-radius: 4px;
+      font-size: 10px;
+      margin-right: 4px;
+    }
+    .cert-badge.award { background: rgba(255,209,102,.08); color: var(--a4); border: 1px solid rgba(255,209,102,.2); }
+    .cert-badge.completion { background: rgba(79,247,200,.07); color: var(--a2); border: 1px solid rgba(79,247,200,.18); }
+    .cert-badge.participation { background: rgba(124,108,255,.08); color: var(--ac); border: 1px solid rgba(124,108,255,.2); }
+    .cert-badge.attendance { background: rgba(255,107,107,.07); color: var(--a3); border: 1px solid rgba(255,107,107,.18); }
+
     footer {
       text-align: center;
       padding: 1.5rem;
@@ -1161,7 +1265,7 @@
           <div class="n2">Mohamed</div>
         </div>
         <div class="htitle">AI Developer &amp; Data Scientist</div>
-        <p class="hdesc">Building intelligent systems — Student Engagement Detection, 3D AI Reconstruction, Dynamic
+        <p class="hdesc">Building intelligent systems — 3D AI Reconstruction, Dynamic
           Pricing &amp; more. Expert in ML, NLP, Deep Learning &amp; Agentic workflows.</p>
         <div class="hbtns">
           <a href="https://github.com/nsr51324" target="_blank" class="btn primary">
@@ -1182,7 +1286,7 @@
         <img class="photo" src="https://avatars.githubusercontent.com/u/184905883?v=4" alt="Nasr Mohamed"
           onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22210%22 height=%22260%22><rect fill=%22%231e1e32%22 width=%22210%22 height=%22260%22 rx=%2218%22/><text fill=%22%237c6cff%22 font-size=%2254%22 font-family=%22sans-serif%22 x=%22105%22 y=%22142%22 text-anchor=%22middle%22 font-weight=%22800%22>NM</text></svg>'">
         <div class="pstat">
-          <div class="pnum">15+</div>
+          <div class="pnum">19+</div>
           <div class="plbl">Projects</div>
         </div>
       </div>
@@ -1192,16 +1296,16 @@
   <!-- STRIP -->
   <div class="strip rv">
     <div class="scell">
-      <div class="snum" data-c="6">0</div>
+      <div class="snum" data-c="10">0</div>
       <div class="slbl">GitHub repos</div>
     </div>
     <div class="scell">
-      <div class="snum" data-c="15">0</div>
+      <div class="snum" data-c="19">0</div>
       <div class="slbl">Total projects</div>
     </div>
     <div class="scell">
-      <div class="snum" data-c="5">0</div>
-      <div class="slbl">Awards</div>
+      <div class="snum" data-c="17">0</div>
+      <div class="slbl">Certificates</div>
     </div>
     <div class="scell">
       <div class="snum" data-c="170">0</div>
@@ -1260,20 +1364,17 @@
             target="_blank" class="plnk"><img src="https://cdn.simpleicons.org/github/ffffff" alt="">GitHub ↗</a></div>
       </div>
 
+
+
       <div class="pcard" data-c="main" onmousemove="mm(event,this)" onmouseleave="ml(this)">
         <div class="psrc gh"><img src="https://cdn.simpleicons.org/github/ffffff" alt="">GitHub</div>
-        <div class="pico ipc" style="margin-top:.5rem;">👁️</div>
-        <div class="pcat c">Computer Vision · EdTech</div>
-        <div class="ptitle">Student Engagement Detection</div>
-        <div class="pdesc">Real time camera system using DeepFace &amp; gaze tracking to classify student
-          attention. Live teacher dashboard with drop alerts. Works in person &amp; remote classrooms.</div>
-        <div class="ptags"><span class="tg c">DeepFace</span><span class="tg c">Gaze Tracking</span><span
-            class="tg">OpenCV</span><span class="tg">Flask</span><span class="tg t">Real-time</span></div>
-        <div class="pfoot"><span class="pdate">Sep 2024 – May 2025</span><a href="https://github.com/nsr51324"
-            target="_blank" class="plnk"><img src="https://cdn.simpleicons.org/github/ffffff" alt="">GitHub ↗</a></div>
+        <div class="pico ipt" style="margin-top:.5rem;">🎓</div>
+        <div class="pcat t">EdTech · Full Stack AI</div>
+        <div class="ptitle">Edusence</div>
+        <div class="pdesc">AI-powered educational platform. Smart learning system with personalized recommendations, progress tracking and adaptive content delivery for students and educators.</div>
+        <div class="ptags"><span class="tg t">EdTech</span><span class="tg">AI</span><span class="tg">Full Stack</span><span class="tg t">Personalization</span></div>
+        <div class="pfoot"><span class="pdate">github.com/nsr51324</span><a href="https://github.com/nsr51324/Edusence" target="_blank" class="plnk"><img src="https://cdn.simpleicons.org/github/ffffff" alt="">GitHub ↗</a></div>
       </div>
-
-      <!-- CNN PROJECTS -->
       <div class="pcard" data-c="cnn" onmousemove="mm(event,this)" onmouseleave="ml(this)">
         <div class="psrc gh"><img src="https://cdn.simpleicons.org/github/ffffff" alt="">GitHub</div>
         <div class="psrc kg"><img src="https://cdn.simpleicons.org/kaggle/20beff" alt="">Kaggle</div>
@@ -1284,9 +1385,9 @@
           distinguishing tumor types with high accuracy using TensorFlow &amp; Keras.</div>
         <div class="ptags"><span class="tg">CNN</span><span class="tg t">Keras</span><span
             class="tg t">TensorFlow</span><span class="tg">Medical AI</span><span class="tg">MRI</span></div>
-        <div class="pfoot"><span class="pdate">github.com/nsr51324/CNN</span>
+        <div class="pfoot"><span class="pdate">github.com/nsr51324</span>
           <div style="display:flex;gap:5px;">
-            <a href="https://github.com/nsr51324/CNN/tree/main/Brain%20Tumor%20Classifier" target="_blank"
+            <a href="https://github.com/nsr51324/Brain-Tumor-Classifier" target="_blank"
               class="plnk"><img src="https://cdn.simpleicons.org/github/ffffff" alt="">↗</a>
             <a href="https://www.kaggle.com/code/nsr51324/brain-tumor-classifer" target="_blank" class="plnk k"><img
                 src="https://cdn.simpleicons.org/kaggle/20beff" alt="">↗</a>
@@ -1304,9 +1405,9 @@
           fine tuning. Custom dataset training with data augmentation pipeline.</div>
         <div class="ptags"><span class="tg t">CNN</span><span class="tg t">Transfer Learning</span><span
             class="tg">Keras</span><span class="tg">Augmentation</span></div>
-        <div class="pfoot"><span class="pdate">github.com/nsr51324/CNN</span>
+        <div class="pfoot"><span class="pdate">github.com/nsr51324</span>
           <div style="display:flex;gap:5px;">
-            <a href="https://github.com/nsr51324/CNN/tree/main/Alpaca%20Classification" target="_blank"
+            <a href="https://github.com/nsr51324/Alpaca-Classification" target="_blank"
               class="plnk"><img src="https://cdn.simpleicons.org/github/ffffff" alt="">↗</a>
             <a href="https://www.kaggle.com/code/nsr51324/alpaca-image-classification" target="_blank"
               class="plnk k"><img src="https://cdn.simpleicons.org/kaggle/20beff" alt="">↗</a>
@@ -1339,8 +1440,8 @@
           algorithms compared with evaluation metrics and feature importance analysis.</div>
         <div class="ptags"><span class="tg c">Classification</span><span class="tg">Scikit-learn</span><span
             class="tg">EDA</span><span class="tg t">Pandas</span></div>
-        <div class="pfoot"><span class="pdate">Machine Learning repo</span><a
-            href="https://github.com/nsr51324/Machine-Learning/tree/main/Breast%20Cancer" target="_blank"
+        <div class="pfoot"><span class="pdate">github.com/nsr51324</span><a
+            href="https://github.com/nsr51324/Breast-Cancer" target="_blank"
             class="plnk"><img src="https://cdn.simpleicons.org/github/ffffff" alt="">GitHub ↗</a></div>
       </div>
 
@@ -1353,8 +1454,8 @@
           to identify fraudulent transactions with high precision.</div>
         <div class="ptags"><span class="tg a">Fraud Detection</span><span class="tg a">SMOTE</span><span
             class="tg">Scikit-learn</span><span class="tg">Imbalanced</span></div>
-        <div class="pfoot"><span class="pdate">Machine-Learning repo</span><a
-            href="https://github.com/nsr51324/Machine-Learning/tree/main/Credit%20Card%20Fraud%20Detection"
+        <div class="pfoot"><span class="pdate">github.com/nsr51324</span><a
+            href="https://github.com/nsr51324/Credit-Card-Fraud-Detection"
             target="_blank" class="plnk"><img src="https://cdn.simpleicons.org/github/ffffff" alt="">GitHub ↗</a></div>
       </div>
 
@@ -1368,9 +1469,9 @@
           property descriptions. Feature engineering on location, size &amp; amenities.</div>
         <div class="ptags"><span class="tg b">Regression</span><span class="tg">NLP</span><span class="tg t">2026
             Data</span><span class="tg">Feature Eng.</span></div>
-        <div class="pfoot"><span class="pdate">Machine Learning repo</span>
+        <div class="pfoot"><span class="pdate">github.com/nsr51324</span>
           <div style="display:flex;gap:5px;">
-            <a href="https://github.com/nsr51324/Machine-Learning/tree/main/Real%20Estate%202026" target="_blank"
+            <a href="https://github.com/nsr51324/Real-Estate-2026" target="_blank"
               class="plnk"><img src="https://cdn.simpleicons.org/github/ffffff" alt="">↗</a>
             <a href="https://www.kaggle.com/code/nsr51324/real-estate-2026-prediction-price-nlp" target="_blank"
               class="plnk k"><img src="https://cdn.simpleicons.org/kaggle/20beff" alt="">↗</a>
@@ -1501,7 +1602,56 @@
         </div>
       </div>
 
+      <!-- ML PROJECTS — CODVEDA INTERNSHIP -->
+      <div class="pcard" data-c="ml" onmousemove="mm(event,this)" onmouseleave="ml(this)">
+        <div class="psrc gh"><img src="https://cdn.simpleicons.org/github/ffffff" alt="">GitHub</div>
+        <div class="psrc kg"><img src="https://cdn.simpleicons.org/kaggle/20beff" alt="">Kaggle</div>
+        <div class="pico ipp" style="margin-top:.5rem;">🔢</div>
+        <div class="pcat">Deep Learning · Computer Vision</div>
+        <div class="ptitle">Feedforward Neural Network (FNN)</div>
+        <div class="pdesc">Deep learning project built with TensorFlow &amp; Keras for handwritten digit recognition on the MNIST dataset. Includes confusion matrix analysis and model evaluation.</div>
+        <div class="ptags"><span class="tg">Neural Networks</span><span class="tg t">TensorFlow</span><span class="tg t">Keras</span><span class="tg">MNIST</span></div>
+        <div class="pfoot"><span class="pdate">Codveda Internship</span>
+          <div style="display:flex;gap:5px;">
+            <a href="https://github.com/nsr51324/Data-Science-Advacned-level-Intern-at-Codveda-Solutions/tree/main/Feedforward%20Neural%20Network%20(FNN)" target="_blank" class="plnk"><img src="https://cdn.simpleicons.org/github/ffffff" alt="">↗</a>
+            <a href="https://www.kaggle.com/code/nsr51324/feedforward-neural-network-fnn" target="_blank" class="plnk k"><img src="https://cdn.simpleicons.org/kaggle/20beff" alt="">↗</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="pcard" data-c="ml" onmousemove="mm(event,this)" onmouseleave="ml(this)">
+        <div class="psrc gh"><img src="https://cdn.simpleicons.org/github/ffffff" alt="">GitHub</div>
+        <div class="psrc kg"><img src="https://cdn.simpleicons.org/kaggle/20beff" alt="">Kaggle</div>
+        <div class="pico ipt" style="margin-top:.5rem;">🌡️</div>
+        <div class="pcat t">ML · Time Series</div>
+        <div class="ptitle">Daily Climate Time Series</div>
+        <div class="pdesc">Time series analysis and forecasting of climate variables. Covers data cleaning, EDA, trend visualization and predictive modeling with model serialization.</div>
+        <div class="ptags"><span class="tg t">Time Series</span><span class="tg">EDA</span><span class="tg t">Pandas</span><span class="tg">Forecasting</span></div>
+        <div class="pfoot"><span class="pdate">Codveda Internship</span>
+          <div style="display:flex;gap:5px;">
+            <a href="https://github.com/nsr51324/Data-Science-Advacned-level-Intern-at-Codveda-Solutions/tree/main/Daily%20Climate%20Time%20Series%20Data" target="_blank" class="plnk"><img src="https://cdn.simpleicons.org/github/ffffff" alt="">↗</a>
+            <a href="https://www.kaggle.com/code/nsr51324/daily-climate-time-series-data" target="_blank" class="plnk k"><img src="https://cdn.simpleicons.org/kaggle/20beff" alt="">↗</a>
+          </div>
+        </div>
+      </div>
+
       <!-- NLP PROJECTS -->
+      <div class="pcard" data-c="nlp" onmousemove="mm(event,this)" onmouseleave="ml(this)">
+        <div class="psrc gh"><img src="https://cdn.simpleicons.org/github/ffffff" alt="">GitHub</div>
+        <div class="psrc kg"><img src="https://cdn.simpleicons.org/kaggle/20beff" alt="">Kaggle</div>
+        <div class="pico ipc" style="margin-top:.5rem;">🏷️</div>
+        <div class="pcat c">NLP · Classification</div>
+        <div class="ptitle">Text Classification (NLP) — Codveda</div>
+        <div class="pdesc">NLP text classification using TF-IDF vectorization and machine learning. Full pipeline from text preprocessing to model evaluation with precision, recall and F1-score.</div>
+        <div class="ptags"><span class="tg c">TF-IDF</span><span class="tg t">NLP</span><span class="tg">Scikit-learn</span><span class="tg">Classification</span></div>
+        <div class="pfoot"><span class="pdate">Codveda Internship</span>
+          <div style="display:flex;gap:5px;">
+            <a href="https://github.com/nsr51324/Data-Science-Advacned-level-Intern-at-Codveda-Solutions/tree/main/Text%20Classification%20-%20(NLP)" target="_blank" class="plnk"><img src="https://cdn.simpleicons.org/github/ffffff" alt="">↗</a>
+            <a href="https://www.kaggle.com/code/nsr51324/text-classification-nlp" target="_blank" class="plnk k"><img src="https://cdn.simpleicons.org/kaggle/20beff" alt="">↗</a>
+          </div>
+        </div>
+      </div>
+
       <div class="pcard" data-c="nlp" onmousemove="mm(event,this)" onmouseleave="ml(this)">
         <div class="psrc gh"><img src="https://cdn.simpleicons.org/github/ffffff" alt="">GitHub</div>
         <div class="psrc kg"><img src="https://cdn.simpleicons.org/kaggle/20beff" alt="">Kaggle</div>
@@ -1597,6 +1747,19 @@
     <div class="stitle rv">Experience</div>
     <div class="expcard rv">
       <div>
+        <div class="ecomp">Codveda Solutions</div>
+        <div class="erole">Data Science Advanced Level Intern · Remote</div>
+        <ul class="ebul">
+          <li>Built Feedforward Neural Network (FNN) for handwritten digit recognition on MNIST using TensorFlow &amp; Keras</li>
+          <li>Time series analysis &amp; forecasting on daily climate data with predictive modeling</li>
+          <li>Developed NLP text classification pipeline using TF-IDF vectorization and Scikit-learn</li>
+        </ul>
+      </div>
+      <div class="ebadge">May 2026 – Present</div>
+    </div>
+
+    <div class="expcard rv" style="margin-top:1rem;">
+      <div>
         <div class="ecomp">CodeAlpha</div>
         <div class="erole">Data Analysis Intern · Remote</div>
         <ul class="ebul">
@@ -1613,29 +1776,42 @@
       <div class="stitle rv">Awards</div>
       <div class="awards rv">
         <div class="award">
+          <div class="aico">🔬</div>
+          <div class="atxt"><b>ISEF Republic Level Qualifier</b> — National Science &amp; Engineering Fair · 2025</div>
+        </div>
+        <div class="award">
           <div class="aico">🥈</div>
-          <div class="atxt"><b>2nd Place</b> — Python Problem Solving Competition, Mobica</div>
+          <div class="atxt"><b>2nd Place — Python Problem Solving Competition</b> · Mobica / IATS</div>
         </div>
         <div class="award">
           <div class="aico">🏆</div>
-          <div class="atxt"><b>Best Idea &amp; Best Presentation</b> — iSchool Startup Teen Competition</div>
-        </div>
-        <div class="award">
-          <div class="aico">🔬</div>
-          <div class="atxt"><b>ISEF Republic Level Qualifier</b> — National screening for Int'l Science &amp;
-            Engineering Fair</div>
+          <div class="atxt"><b>Best Idea &amp; Best Presentation</b> — Startup Teen Egypt · iSchool · Aug 2025</div>
         </div>
         <div class="award">
           <div class="aico">🤖</div>
-          <div class="atxt"><b>Nile University AI Competition</b> — Certificate of Participation</div>
+          <div class="atxt"><b>DeepX 2026 Hackathon</b> — Nile University IECC · 2026</div>
         </div>
         <div class="award">
           <div class="aico">⚡</div>
-          <div class="atxt"><b>GDG Google Developer Groups</b> — Certificate of Participation</div>
+          <div class="atxt"><b>E-Gnite Bootcamp &amp; Competition</b> — Nile University · Certificate of Achievement</div>
+        </div>
+        <div class="award">
+          <div class="aico">🏛️</div>
+          <div class="atxt"><b>Digitopia — Programming &amp; AI</b> · Ministry of Communications &amp; IT · Stage 2 · 2025</div>
+        </div>
+        <div class="award">
+          <div class="aico">🔷</div>
+          <div class="atxt"><b>Build Your Campus Competition</b> — Google Developer Groups · Feb 2026</div>
+        </div>
+        <div class="award">
+          <div class="aico">🌊</div>
+          <div class="atxt"><b>Blue Ocean Student Entrepreneurs</b> — Virtual Pitch Competition · Jan 2026</div>
         </div>
       </div>
     </div>
   </section>
+
+
 
   <div class="divr"></div>
 
@@ -1650,9 +1826,9 @@
           IATS<br>Download or view the full CV with all experience, projects &amp; skills.</div>
       </div>
       <div class="cvbtns">
-        <a href="https://drive.google.com/file/d/14hiTmY8JFIWCQ_7Lbg6ffTcqq8XGaLDg/view?usp=sharing" target="_blank"
+        <a href="https://drive.google.com/file/d/1Gvql6skQXzPiuSbX-4APdngAyhWSOM5S/view?usp=sharing" target="_blank"
           class="cvbtn vw">👁 View CV</a>
-        <a href="https://drive.google.com/uc?export=download&id=14hiTmY8JFIWCQ_7Lbg6ffTcqq8XGaLDg" class="cvbtn dl">⬇
+        <a href="https://drive.google.com/uc?export=download&id=1Gvql6skQXzPiuSbX-4APdngAyhWSOM5S" class="cvbtn dl">⬇
           Download CV</a>
       </div>
     </div>
@@ -1799,6 +1975,50 @@
       btn.disabled = false;
       return false;
     }
+    // CERTIFICATE SLIDER
+    (function() {
+      const track = document.getElementById('certTrack');
+      const slides = track ? track.querySelectorAll('.cert-slide') : [];
+      const total = slides.length;
+      let cur = 0;
+      const dotsWrap = document.getElementById('certDots');
+      const counter = document.getElementById('certCounter');
+
+      if (!total) return;
+
+      // Build dots
+      for (let i = 0; i < total; i++) {
+        const d = document.createElement('div');
+        d.className = 'cert-dot' + (i === 0 ? ' active' : '');
+        d.onclick = () => go(i);
+        dotsWrap.appendChild(d);
+      }
+
+      function go(n) {
+        cur = (n + total) % total;
+        track.style.transform = 'translateX(-' + (cur * 100) + '%)';
+        dotsWrap.querySelectorAll('.cert-dot').forEach((d, i) => d.classList.toggle('active', i === cur));
+        counter.textContent = (cur + 1) + ' / ' + total;
+      }
+
+      document.getElementById('certPrev').onclick = () => go(cur - 1);
+      document.getElementById('certNext').onclick = () => go(cur + 1);
+
+      // Swipe support
+      let sx = 0;
+      track.addEventListener('touchstart', e => { sx = e.touches[0].clientX; }, {passive:true});
+      track.addEventListener('touchend', e => {
+        const dx = e.changedTouches[0].clientX - sx;
+        if (Math.abs(dx) > 40) go(dx < 0 ? cur + 1 : cur - 1);
+      }, {passive:true});
+
+      // Keyboard
+      document.addEventListener('keydown', e => {
+        if (e.key === 'ArrowRight') go(cur + 1);
+        if (e.key === 'ArrowLeft') go(cur - 1);
+      });
+    })();
+
   </script>
 
 </body>
