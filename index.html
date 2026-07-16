@@ -325,11 +325,11 @@
     }
 
     .photo {
-      width: 210px;
-      height: 260px;
-      border-radius: 18px;
+      width: 190px;
+      height: 235px;
+      border-radius: 16px;
       object-fit: cover;
-      object-position: center top;
+      object-position: center 18%;
       border: 2px solid rgba(124, 108, 255, .28);
       display: block;
       position: relative;
@@ -561,6 +561,16 @@
       border: 1px solid rgba(32, 190, 255, .15);
     }
 
+    .psrc.hf {
+      background: rgba(255, 210, 30, .08);
+      color: #ffd21e;
+      border: 1px solid rgba(255, 210, 30, .18);
+    }
+
+    .plnk.hf {
+      color: #ffd21e;
+    }
+
     .psrc img {
       width: 10px;
       height: 10px;
@@ -766,9 +776,8 @@
       border-radius: 13px;
       padding: 20px 24px;
       display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 1rem;
+      flex-direction: column;
+      gap: .75rem;
       transition: border-color .25s;
     }
 
@@ -776,24 +785,38 @@
       border-color: rgba(124, 108, 255, .3);
     }
 
+    .exphead {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .expmeta {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
     .ecomp {
       font-family: 'Syne', sans-serif;
       font-size: 1rem;
       font-weight: 700;
       letter-spacing: -.4px;
-      margin-bottom: 3px;
     }
 
     .erole {
       color: var(--ac);
       font-size: 11px;
-      margin-bottom: 8px;
     }
 
     .ebul {
       color: rgba(238, 238, 255, .46);
       font-size: 12px;
       line-height: 1.9;
+      margin: 0;
+      padding-left: 0;
     }
 
     .ebul li {
@@ -1283,10 +1306,10 @@
       <div class="phw">
         <div class="pr"></div>
         <div class="pr2"></div>
-        <img class="photo" src="https://avatars.githubusercontent.com/u/184905883?v=4" alt="Nasr Mohamed"
+        <img class="photo" src="profile.jpg" alt="Nasr Mohamed"
           onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22210%22 height=%22260%22><rect fill=%22%231e1e32%22 width=%22210%22 height=%22260%22 rx=%2218%22/><text fill=%22%237c6cff%22 font-size=%2254%22 font-family=%22sans-serif%22 x=%22105%22 y=%22142%22 text-anchor=%22middle%22 font-weight=%22800%22>NM</text></svg>'">
         <div class="pstat">
-          <div class="pnum">19+</div>
+          <div class="pnum">25+</div>
           <div class="plbl">Projects</div>
         </div>
       </div>
@@ -1296,11 +1319,11 @@
   <!-- STRIP -->
   <div class="strip rv">
     <div class="scell">
-      <div class="snum" data-c="10">0</div>
+      <div class="snum" data-c="15">0</div>
       <div class="slbl">GitHub repos</div>
     </div>
     <div class="scell">
-      <div class="snum" data-c="19">0</div>
+      <div class="snum" data-c="25">0</div>
       <div class="slbl">Total projects</div>
     </div>
     <div class="scell">
@@ -1324,6 +1347,9 @@
       <button class="tab" onclick="fp('ml',this)">📊 ML</button>
       <button class="tab" onclick="fp('da',this)">🔍 Data Analysis</button>
       <button class="tab" onclick="fp('nlp',this)">💬 NLP</button>
+      <button class="tab" onclick="fp('det',this)">🎯 Detection</button>
+      <button class="tab" onclick="fp('audio',this)">🎧 Audio</button>
+      <button class="tab" onclick="fp('de',this)">🗄️ Data Eng</button>
     </div>
     <div class="pgrid" id="pg">
 
@@ -1348,6 +1374,23 @@
           <a href="https://github.com/nsr51324" target="_blank" class="plnk"><img
               src="https://cdn.simpleicons.org/github/ffffff" alt="">GitHub ↗</a>
         </div>
+      </div>
+
+      <div class="pcard" data-c="main" onmousemove="mm(event,this)" onmouseleave="ml(this)">
+        <div class="inprog"><span class="ndot" style="width:5px;height:5px;"></span>In Progress</div>
+        <div class="psrc gh"><img src="https://cdn.simpleicons.org/github/ffffff" alt="">GitHub</div>
+        <div class="pico ipb" style="margin-top:.5rem;">🔎</div>
+        <div class="pcat b">Applied ML · Internship</div>
+        <div class="ptitle">FlyRank ML Internship — Search Ranking Intelligence</div>
+        <div class="pdesc">Applied ML internship pipeline for Google Search ranking &amp; discoverability. Feature
+          engineering, a transparent baseline heuristic, and trained models (logistic regression, decision tree,
+          random forest) compared on real anonymized search data — lifting Precision@50 from ~0.24 to ~0.74 for
+          prioritizing which pages to review first.</div>
+        <div class="ptags"><span class="tg b">ML</span><span class="tg">Feature Engineering</span><span
+            class="tg b">DuckDB</span><span class="tg">Model Evaluation</span></div>
+        <div class="pfoot"><span class="pdate">Jul 2026 – Present</span><a
+            href="https://github.com/nsr51324/flyrank-ml-internship" target="_blank" class="plnk"><img
+              src="https://cdn.simpleicons.org/github/ffffff" alt="">GitHub ↗</a></div>
       </div>
 
       <div class="pcard" data-c="main" onmousemove="mm(event,this)" onmouseleave="ml(this)">
@@ -1427,6 +1470,48 @@
         <div class="pfoot"><span class="pdate">kaggle.com/nsr51324</span>
           <a href="https://www.kaggle.com/code/nsr51324/hand-image-classification" target="_blank" class="plnk k"><img
               src="https://cdn.simpleicons.org/kaggle/20beff" alt="">Kaggle ↗</a>
+        </div>
+      </div>
+
+      <div class="pcard" data-c="cnn" onmousemove="mm(event,this)" onmouseleave="ml(this)">
+        <div class="psrc gh"><img src="https://cdn.simpleicons.org/github/ffffff" alt="">GitHub</div>
+        <div class="psrc hf"><img src="https://cdn.simpleicons.org/huggingface/ffd21e" alt="">HuggingFace</div>
+        <div class="pico ipc" style="margin-top:.5rem;">🦷</div>
+        <div class="pcat c">CNN · Medical AI</div>
+        <div class="ptitle">Oral Diseases Image Classification</div>
+        <div class="pdesc">Benchmarked 4 architectures (ScratchCNN, ResNet50, EfficientNet-B0, DenseNet121) for
+          intraoral disease screening across 6 conditions on identical train/val/test splits. Best model
+          (ResNet50) reached 94.77% accuracy, shipped with a live Gradio demo and weights on Hugging Face.</div>
+        <div class="ptags"><span class="tg c">PyTorch</span><span class="tg">ResNet50</span><span
+            class="tg c">Transfer Learning</span><span class="tg">Gradio</span></div>
+        <div class="pfoot"><span class="pdate">github.com/nsr51324</span>
+          <div style="display:flex;gap:5px;">
+            <a href="https://github.com/nsr51324/Oral-Diseases-Image-Classification" target="_blank"
+              class="plnk"><img src="https://cdn.simpleicons.org/github/ffffff" alt="">↗</a>
+            <a href="https://huggingface.co/nsr51324/Oral_Diseases_Image_Classification" target="_blank"
+              class="plnk hf"><img src="https://cdn.simpleicons.org/huggingface/ffd21e" alt="">↗</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="pcard" data-c="det" onmousemove="mm(event,this)" onmouseleave="ml(this)">
+        <div class="psrc gh"><img src="https://cdn.simpleicons.org/github/ffffff" alt="">GitHub</div>
+        <div class="psrc hf"><img src="https://cdn.simpleicons.org/huggingface/ffd21e" alt="">HuggingFace</div>
+        <div class="pico ipb" style="margin-top:.5rem;">🛣️</div>
+        <div class="pcat b">Object Detection · Computer Vision</div>
+        <div class="ptitle">Road Damage Object Detection</div>
+        <div class="pdesc">Road damage detection with YOLOv8, YOLOv10 &amp; YOLO11, benchmarked head-to-head on
+          mAP50, precision, recall &amp; FPS. Trained weights hosted on Hugging Face and served through a modern
+          Gradio interface for fast inference.</div>
+        <div class="ptags"><span class="tg b">YOLO</span><span class="tg">Ultralytics</span><span
+            class="tg b">PyTorch</span><span class="tg">Gradio</span></div>
+        <div class="pfoot"><span class="pdate">github.com/nsr51324</span>
+          <div style="display:flex;gap:5px;">
+            <a href="https://github.com/nsr51324/Road-Damage-Object-Detection" target="_blank"
+              class="plnk"><img src="https://cdn.simpleicons.org/github/ffffff" alt="">↗</a>
+            <a href="https://huggingface.co/nsr51324/Road_Damage_Object_Detection" target="_blank"
+              class="plnk hf"><img src="https://cdn.simpleicons.org/huggingface/ffd21e" alt="">↗</a>
+          </div>
         </div>
       </div>
 
@@ -1602,6 +1687,21 @@
         </div>
       </div>
 
+      <div class="pcard" data-c="de" onmousemove="mm(event,this)" onmouseleave="ml(this)">
+        <div class="psrc gh"><img src="https://cdn.simpleicons.org/github/ffffff" alt="">GitHub</div>
+        <div class="pico ipa" style="margin-top:.5rem;">🏙️</div>
+        <div class="pcat a">Data Engineering · Analytics</div>
+        <div class="ptitle">Airbnb European Cities — Price Analytics Warehouse</div>
+        <div class="pdesc">End-to-end data warehouse over 51,000+ Airbnb listings across 10 European cities, built on
+          a Bronze → Silver → Gold Medallion Architecture. A Star Schema DWH on SQL Server feeds an interactive
+          Power BI dashboard supporting short-term rental pricing &amp; investment decisions.</div>
+        <div class="ptags"><span class="tg a">SQL Server</span><span class="tg">Power BI</span><span
+            class="tg a">Star Schema</span><span class="tg">ETL</span></div>
+        <div class="pfoot"><span class="pdate">github.com/nsr51324</span><a
+            href="https://github.com/nsr51324/Airbnb-Prices-in-European-Cities" target="_blank"
+            class="plnk"><img src="https://cdn.simpleicons.org/github/ffffff" alt="">GitHub ↗</a></div>
+      </div>
+
       <!-- ML PROJECTS — CODVEDA INTERNSHIP -->
       <div class="pcard" data-c="ml" onmousemove="mm(event,this)" onmouseleave="ml(this)">
         <div class="psrc gh"><img src="https://cdn.simpleicons.org/github/ffffff" alt="">GitHub</div>
@@ -1700,6 +1800,43 @@
               src="https://cdn.simpleicons.org/kaggle/20beff" alt="">Kaggle ↗</a></div>
       </div>
 
+      <div class="pcard" data-c="nlp" onmousemove="mm(event,this)" onmouseleave="ml(this)">
+        <div class="psrc gh"><img src="https://cdn.simpleicons.org/github/ffffff" alt="">GitHub</div>
+        <div class="pico ipp" style="margin-top:.5rem;">💭</div>
+        <div class="pcat">NLP · Mental Health</div>
+        <div class="ptitle">Sentiment Analysis — Mental Health Text Classification</div>
+        <div class="pdesc">NLP system classifying mental-health related text into emotional states such as stress,
+          anxiety and neutral feelings. TF-IDF based preprocessing feeds a trained classifier wrapped in a real-time
+          Python prediction app.</div>
+        <div class="ptags"><span class="tg">NLP</span><span class="tg t">TF-IDF</span><span
+            class="tg">Scikit-learn</span><span class="tg t">Text Classification</span></div>
+        <div class="pfoot"><span class="pdate">github.com/nsr51324</span><a
+            href="https://github.com/nsr51324/Sentiment-Analysis-Mental-Health-Text-Classification-" target="_blank"
+            class="plnk"><img src="https://cdn.simpleicons.org/github/ffffff" alt="">GitHub ↗</a></div>
+      </div>
+
+      <!-- AUDIO PROJECTS -->
+      <div class="pcard" data-c="audio" onmousemove="mm(event,this)" onmouseleave="ml(this)">
+        <div class="psrc gh"><img src="https://cdn.simpleicons.org/github/ffffff" alt="">GitHub</div>
+        <div class="psrc hf"><img src="https://cdn.simpleicons.org/huggingface/ffd21e" alt="">HuggingFace</div>
+        <div class="pico ipa" style="margin-top:.5rem;">🎙️</div>
+        <div class="pcat a">Audio · Speech Emotion Recognition</div>
+        <div class="ptitle">Emotion Detection from Speech</div>
+        <div class="pdesc">Deep learning Speech Emotion Recognition system classifying 7 emotions — happy, sad,
+          angry, neutral, fear, disgust, surprise — from WAV audio, trained on a 2,500+ sample dataset hosted on
+          Hugging Face.</div>
+        <div class="ptags"><span class="tg a">TensorFlow/Keras</span><span class="tg">Librosa</span><span
+            class="tg a">Audio Classification</span><span class="tg">Deep Learning</span></div>
+        <div class="pfoot"><span class="pdate">github.com/nsr51324</span>
+          <div style="display:flex;gap:5px;">
+            <a href="https://github.com/nsr51324/Emotion-Detection-Speech-" target="_blank"
+              class="plnk"><img src="https://cdn.simpleicons.org/github/ffffff" alt="">↗</a>
+            <a href="https://huggingface.co/datasets/nsr51324/Speech_Emotion_Recognition" target="_blank"
+              class="plnk hf"><img src="https://cdn.simpleicons.org/huggingface/ffd21e" alt="">↗</a>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -1712,28 +1849,31 @@
     <div class="sgrid rv">
       <div class="sg">
         <div class="sgt">Languages & Libraries</div>
-        <div class="chips"><span class="chip">Python</span><span class="chip">SQL</span><span
-            class="chip">C++</span><span class="chip">Java</span><span class="chip">HTML/CSS</span><span
+        <div class="chips"><span class="chip">Python</span><span class="chip">SQL</span><span class="chip">HTML/CSS</span><span
             class="chip">Pandas</span><span class="chip">NumPy</span><span class="chip">Keras</span><span
-            class="chip">TensorFlow</span><span class="chip">Scikit-learn</span><span class="chip">OpenCV</span><span
-            class="chip">MediaPipe</span></div>
+            class="chip">TensorFlow</span><span class="chip">PyTorch</span><span
+            class="chip">Scikit-learn</span><span class="chip">OpenCV</span><span
+            class="chip">MediaPipe</span>
       </div>
       <div class="sg">
         <div class="sgt">AI & Machine Learning</div>
         <div class="chips"><span class="chip">NLP</span><span class="chip">BERT</span><span class="chip">RAG</span><span
             class="chip">Prompt Eng.</span><span class="chip">Multi-Agent</span><span class="chip">ABSA</span><span
-            class="chip">LSTM</span><span class="chip">CNN</span><span class="chip">Transfer Learning</span></div>
+            class="chip">LSTM</span><span class="chip">CNN</span><span class="chip">Transfer Learning</span><span
+            class="chip">YOLO / Object Detection</span><span class="chip">Speech Emotion Recognition</span></div>
       </div>
       <div class="sg">
         <div class="sgt">Frameworks & Tools</div>
         <div class="chips"><span class="chip">CrewAI</span><span class="chip">n8n</span><span
             class="chip">Docker</span><span class="chip">Streamlit</span><span class="chip">FastAPI</span><span
-            class="chip">Flask</span><span class="chip">ComfyUI</span><span class="chip">HuggingFace</span></div>
+            class="chip">Flask</span><span class="chip">HuggingFace</span><span
+            class="chip">Gradio</span><span class="chip">DuckDB</span></div>
       </div>
       <div class="sg">
         <div class="sgt">Data & Visualization</div>
         <div class="chips"><span class="chip">Power BI</span><span class="chip">Tableau</span><span
-            class="chip">Excel</span><span class="chip">EDA</span><span class="chip">ETL</span><span
+            class="chip">Excel</span><span class="chip">SQL Server</span><span class="chip">EDA</span><span
+            class="chip">ETL</span><span
             class="chip">Matplotlib</span><span class="chip">Seaborn</span><span class="chip">Plotly</span></div>
       </div>
     </div>
@@ -1746,35 +1886,77 @@
     <div class="stag rv">// work history</div>
     <div class="stitle rv">Experience</div>
     <div class="expcard rv">
-      <div>
-        <div class="ecomp">Codveda Solutions</div>
-        <div class="erole">Data Science Advanced Level Intern · Remote</div>
-        <ul class="ebul">
-          <li>Built Feedforward Neural Network (FNN) for handwritten digit recognition on MNIST using TensorFlow &amp; Keras</li>
-          <li>Time series analysis &amp; forecasting on daily climate data with predictive modeling</li>
-          <li>Developed NLP text classification pipeline using TF-IDF vectorization and Scikit-learn</li>
-        </ul>
+      <div class="exphead">
+        <div class="expmeta">
+          <div class="ecomp">Instant Software Solution</div>
+          <div class="erole">AI Engineer Trainee</div>
+        </div>
+        <div class="ebadge">Jul 2026 - Present</div>
       </div>
-      <div class="ebadge">May 2026 – Present</div>
+      <ul class="ebul">
+        <li>Gaining hands-on experience in Machine Learning, Deep Learning, NLP, Computer Vision, and Generative AI through real-world projects and technical training.</li>
+        <li>Working with Python, SQL, FastAPI, PyTorch, TensorFlow, and YOLO to build, evaluate, and deploy AI solutions.</li>
+        <li>Exploring modern AI techniques including Transformers, RAG, Agentic AI, CNNs, RNNs, and LSTMs, alongside data engineering and analytics concepts such as Star Schema and ETL workflows.</li>
+        <li>Collaborating with the engineering team to develop, test, and improve AI-powered applications and workflows.</li>
+      </ul>
     </div>
 
     <div class="expcard rv" style="margin-top:1rem;">
-      <div>
-        <div class="ecomp">CodeAlpha</div>
-        <div class="erole">Data Analysis Intern · Remote</div>
-        <ul class="ebul">
-          <li>Collected &amp; structured data from multiple sources into analysis ready datasets</li>
-          <li>EDA, cleaning &amp; transformation using Python and SQL</li>
-          <li>Built dashboards using Power BI, Tableau &amp; Excel</li>
-        </ul>
+      <div class="exphead">
+        <div class="expmeta">
+          <div class="ecomp">FlyRank AI</div>
+          <div class="erole">ML Engineer Intern · Remote</div>
+        </div>
+        <div class="ebadge">Jul 2026 – Present</div>
       </div>
-      <div class="ebadge">Sep – Oct 2025</div>
+      <ul class="ebul">
+        <li>Built an end-to-end applied ML pipeline — feature engineering, baseline heuristic, model training &amp;
+          evaluation — on real anonymized Google Search ranking data</li>
+        <li>Compared a transparent hand-rule baseline against trained models (logistic regression, decision tree,
+          random forest), lifting Precision@50 from ~0.24 to ~0.74 for prioritizing pages to review</li>
+        <li>Worked with a ~79M-row full data release via DuckDB and produced explainable, decision-support
+          ranking reports</li>
+      </ul>
+    </div>
+
+    <div class="expcard rv" style="margin-top:1rem;">
+      <div class="exphead">
+        <div class="expmeta">
+          <div class="ecomp">Codveda Solutions</div>
+          <div class="erole">Data Science Advanced Level Intern · Remote</div>
+        </div>
+        <div class="ebadge">May 2026 – Present</div>
+      </div>
+      <ul class="ebul">
+        <li>Built Feedforward Neural Network (FNN) for handwritten digit recognition on MNIST using TensorFlow &amp; Keras</li>
+        <li>Time series analysis &amp; forecasting on daily climate data with predictive modeling</li>
+        <li>Developed NLP text classification pipeline using TF-IDF vectorization and Scikit-learn</li>
+      </ul>
+    </div>
+
+    <div class="expcard rv" style="margin-top:1rem;">
+      <div class="exphead">
+        <div class="expmeta">
+          <div class="ecomp">CodeAlpha</div>
+          <div class="erole">Data Analysis Intern · Remote</div>
+        </div>
+        <div class="ebadge">Sep – Oct 2025</div>
+      </div>
+      <ul class="ebul">
+        <li>Collected &amp; structured data from multiple sources into analysis ready datasets</li>
+        <li>EDA, cleaning &amp; transformation using Python and SQL</li>
+        <li>Built dashboards using Power BI, Tableau &amp; Excel</li>
+      </ul>
     </div>
 
     <div style="margin-top:2rem;">
       <div class="stag rv">// recognition</div>
       <div class="stitle rv">Awards</div>
       <div class="awards rv">
+        <div class="award">
+          <div class="aico">🏅</div>
+          <div class="atxt"><b>Top 20 — NexGenHackathon</b> — National Level · out of 205 teams · 2026</div>
+        </div>
         <div class="award">
           <div class="aico">🔬</div>
           <div class="atxt"><b>ISEF Republic Level Qualifier</b> — National Science &amp; Engineering Fair · 2025</div>
